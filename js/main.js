@@ -117,18 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            if (formData.message.length < 10) {
-                Swal.fire({
-                    title: 'Message Too Short',
-                    text: 'Please write a simple message (at least 10 characters) detailing your needs.',
-                    icon: 'warning',
-                    confirmButtonColor: '#E8C678',
-                    background: '#0B1B1D',
-                    color: '#fff'
-                });
-                return;
-            }
-
             // Set loading state
             btn.disabled = true;
             spinner.classList.remove('d-none');

@@ -849,12 +849,17 @@ section {
     }
 
     .mobile-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 2001;
-        /* Above the overlay */
-        background: rgba(255, 255, 255, 0.1);
-        padding: 5px 10px;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 8px;
+        font-size: 1.3rem;
     }
 
     .header-actions {
@@ -873,7 +878,7 @@ section {
 
     /* Show the real clickable resume button link instead of the CSS hack */
     .mobile-only-resume {
-        display: none;
+        display: block;
         margin-top: 20px;
         width: 100%;
         text-align: center;
