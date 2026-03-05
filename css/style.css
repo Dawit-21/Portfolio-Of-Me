@@ -885,9 +885,9 @@ section {
     }
 
     .mobile-only-resume a {
-        display: block;
-        width: 100%;
-        padding: 12px 20px;
+        display: inline-block;
+        width: auto;
+        padding: 12px 36px;
     }
 
     .hero-content {

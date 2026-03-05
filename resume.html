@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Dawit Ateka Tamie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --primary: #0070f3;
+            --accent: #666666;
+            --border: #eaeaea;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .contact-info {
+            text-align: right;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .item-sub {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 10px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 25px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
+        }
+
+        @media print {
+            .print-btn {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-container">
+        <header>
+            <div>
+                <h1>DAWIT ATEKA TAMIE</h1>
+                <p style="color:var(--primary); font-weight:600;">Full-Stack Web Developer</p>
+            </div>
+            <div class="contact-info">
+                <p><i class="bi bi-envelope"></i> diemasdawit.21@gmail.com</p>
+                <p><i class="bi bi-telephone"></i> +251 985 976 072</p>
+                <p><i class="bi bi-geo-alt"></i> Ethiopia</p>
+                <p><i class="bi bi-github"></i> github.com/Dawit-21</p>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>As a Full-Stack Developer with over a year of experience in web application development,
+                I specialize in both backend and frontend technologies.
+                My expertise lies in PHP and MySQL for building secure and scalable backend architectures,
+                while I also craft responsive and modern user interfaces using JavaScript and various frontend
+                frameworks.
+                <br><br>
+                I am passionate about writing clean code and adhering to best practices, which helps optimize system
+                performance.
+                With strong problem-solving skills, I thrive on tackling complex technical challenges and am committed
+                to
+                delivering real value through user-friendly applications.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Core Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <strong>Languages &amp; Frameworks:</strong>
+                    <p>PHP, JavaScript (ES6+), HTML5, CSS3, SQL, Python, Java/Kotlin.</p>
+                </div>
+                <div>
+                    <strong>Tools &amp; Specialized:</strong>
+                    <p>MySQL, REST APIs, Git, Android Studio, Data Analysis, AI Fundamentals.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span>Daycare Management System</span>
+                    <span>2025</span>
+                </div>
+                <div class="item-sub">Full-Stack Project · PHP, MySQL, JavaScript</div>
+                <ul>
+                    <li>Designed role-based access control for Admins, Managers, and Parents.</li>
+                    <li>Implemented secure file handling and CSRF protection for all user submissions.</li>
+                    <li>Engineered multi-language support (English/Amharic) across the entire platform.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Certifications</h2>
+            <ul>
+                <li>Android Developer Fundamentals</li>
+                <li>Data Analysis Fundamentals</li>
+                <li>Artificial Intelligence Fundamentals</li>
+                <li>Programming Fundamentals</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="javascript:window.print()" class="print-btn"><i class="bi bi-printer"></i> Print / Save PDF</a>
+</body>
+
+</html>

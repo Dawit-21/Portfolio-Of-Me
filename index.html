@@ -38,14 +38,15 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#certificates">Certificates</a></li>
-                <li class="mobile-only-resume"><a href="resume.php" target="_blank" class="btn btn-sm pill"
-                        style="background:var(--accent-color); color:#000; font-weight:bold;">Download Resume</a></li>
+                <li class="mobile-only-resume"><a href="resume.html" target="_blank" class="btn btn-sm pill"
+                        style="background:var(--accent-color); color:#000; font-weight:bold; display:inline-block; width:auto; padding:10px 28px;">Download
+                        Resume</a></li>
             </ul>
             <div class="header-right">
                 <a href="https://github.com/Dawit-21" target="_blank" class="github-link mobile-visible"><i
                         class="bi bi-github"></i></a>
                 <div class="header-actions">
-                    <a href="resume.php" target="_blank" class="btn btn-sm btn-outline btn-resume pill">Resume <i
+                    <a href="resume.html" target="_blank" class="btn btn-sm btn-outline btn-resume pill">Resume <i
                             class="bi bi-file-earmark-person"></i></a>
                 </div>
                 <button class="mobile-toggle" id="mobile-toggle"><i class="bi bi-list"></i></button>
@@ -176,13 +177,43 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <article class="project-card glass">
-                    <div class="project-img video-container" style="height:420px; background:#000;">
-                        <iframe id="demoVideo" src="https://www.youtube.com/embed/QFXEdrWAw_0?rel=0&modestbranding=1"
+                    <div class="project-img video-container"
+                        style="height:420px; background:#000; position:relative; border-radius:12px; overflow:hidden;">
+                        <!-- Thumbnail shown first -->
+                        <div id="videoThumb" onclick="playDemoVideo()"
+                            style="cursor:pointer; width:100%; height:100%; position:relative;">
+                            <img src="assets/images/daycare tembnial.png" alt="Daycare Management System Demo"
+                                style="width:100%; height:100%; object-fit:cover; display:block;">
+                            <!-- Dark overlay -->
+                            <div style="position:absolute; inset:0; background:rgba(0,0,0,0.35);"></div>
+                            <!-- Red play button -->
+                            <div
+                                style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+                                <div
+                                    style="width:72px; height:72px; background:#FF0000; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow: 0 8px 32px rgba(255,0,0,0.6); transition:transform 0.2s;">
+                                    <i class="bi bi-play-fill"
+                                        style="color:white; font-size:2.2rem; margin-left:5px;"></i>
+                                </div>
+                                <span
+                                    style="color:white; font-size:0.9rem; font-weight:600; letter-spacing:1px; text-shadow:0 2px 8px rgba(0,0,0,0.8);">▶
+                                    Watch Demo</span>
+                            </div>
+                        </div>
+                        <!-- YouTube iframe (hidden until play is clicked) -->
+                        <iframe id="demoVideo" style="display:none; width:100%; height:100%; border-radius:12px;"
                             title="Daycare Management System Demo - Dawit Ateka" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen style="width:100%; height:100%; border-radius:12px;">
+                            allowfullscreen>
                         </iframe>
                     </div>
+                    <script>
+                        function playDemoVideo() {
+                            document.getElementById('videoThumb').style.display = 'none';
+                            var iframe = document.getElementById('demoVideo');
+                            iframe.src = 'https://www.youtube.com/embed/QFXEdrWAw_0?rel=0&modestbranding=1&autoplay=1';
+                            iframe.style.display = 'block';
+                        }
+                    </script>
                     <div class="project-info">
                         <h3>Daycare Management System</h3>
                         <p class="project-problem"><strong>Problem:</strong> Fragmented communication and manual
