@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dawit Ateka Tamie - Full-Stack Web Developer Specializing in Secure, Scalable Systems. View my projects and certifications.">
+    <title>Dawit Ateka Tamie | Full-Stack Web Developer</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- SweetAlert2 for attractive alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav-container glass">
+            <div class="logo">
+                <a href="#">DAWIT <span>A.T.</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li class="mobile-only-resume"><a href="resume.php" target="_blank" class="btn btn-sm pill"
+                        style="background:var(--accent-color); color:#000; font-weight:bold;">Download Resume</a></li>
+            </ul>
+            <div class="header-right">
+                <a href="https://github.com/Dawit-21" target="_blank" class="github-link mobile-visible"><i
+                        class="bi bi-github"></i></a>
+                <div class="header-actions">
+                    <a href="resume.php" target="_blank" class="btn btn-sm btn-outline btn-resume pill">Resume <i
+                            class="bi bi-file-earmark-person"></i></a>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle"><i class="bi bi-list"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Background Elements (Reduced by 40% as requested) -->
+        <div class="bg-orb-1"></div>
+        <div class="bg-orb-2"></div>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <div class="portrait-container glass">
+                        <!-- Portrait matching the mockup environment -->
+                        <img src="assets/images/hero_desk.png" alt="Dawit Ateka Tamie">
+                    </div>
+                    <!-- Small corner badge matching mockup -->
+                    <div class="floating-badge badge-1 glass name-badge">
+                        <span>Dawit Ateka</span>
+                    </div>
+                </div>
+
+                <div class="hero-text">
+                    <h2 class="badge">Personal Portfolio</h2>
+                    <p class="mockup-greeting">Hi, I'm <span class="text-gold">Dawit Ateka Tamie.</span></p>
+                    <h1 class="headline">Full-Stack Web Developer <br>Building <span>Secure & Scalable</span> Web
+                        Systems</h1>
+                    <p class="subtext">Specialized in PHP, JavaScript, MySQL, and modern web technologies. Focused on
+                        performance, security, and clean architecture.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary pill">VIEW PROJECTS</a>
+                        <a href="#contact" class="btn btn-outline pill">HIRE ME</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section (Directly under Hero) -->
+            <div class="stats-container glass">
+                <div class="stat-item">
+                    <h3>1</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h3>2</h3>
+                    <p>Completed Projects</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Core Technologies</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Secure Code</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text glass">
+                    <p>I am a passionate Full-Stack Web Developer with strong experience in designing and building
+                        secure, scalable, and user-friendly web applications.</p>
+                    <p>I specialize in backend development using PHP and MySQL, while crafting responsive and modern
+                        interfaces with JavaScript and frontend frameworks.</p>
+                    <p>I enjoy solving complex problems, optimizing system performance, and building applications that
+                        deliver real value to users.</p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card glass">
+                        <i class="bi bi-shield-check"></i>
+                        <h4>Security First</h4>
+                        <p>Forms secured using CSRF protection and role-based authentication.</p>
+                    </div>
+                    <div class="highlight-card glass">
+                        <i class="bi bi-lightning-charge"></i>
+                        <h4>Performance</h4>
+                        <p>Optimized database queries and efficient image handling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass">
+                    <h4><i class="bi bi-layout-text-window-reverse"></i> Frontend</h4>
+                    <ul>
+                        <li>HTML5 / CSS3 / Grid / Flexbox</li>
+                        <li>Modern JavaScript (ES6+)</li>
+                        <li>UI/UX Glassmorphism Design</li>
+                        <li>Responsive Mobile-First</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass">
+                    <h4><i class="bi bi-terminal"></i> Backend</h4>
+                    <ul>
+                        <li>PHP / Clean Code Standards</li>
+                        <li>MySQL Database Architecture</li>
+                        <li>RESTful API Design</li>
+                        <li>Security & Auth Protocols</li>
+                    </ul>
+                </div>
+                <div class="skill-category glass">
+                    <h4><i class="bi bi-gear-wide-connected"></i> Specialized</h4>
+                    <ul>
+                        <li>Android App (Java/Kotlin)</li>
+                        <li>Data Analysis Fundamentals</li>
+                        <li>AI Fundamentals & Implementation</li>
+                        <li>Multilingual Support Architect</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Case-study Style) -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card glass">
+                    <div class="project-img video-container">
+                        <video id="demoVideo" src="assets/images/0305.mp4" poster="assets/images/daycare tembnial.png"
+                            controls playsinline preload="metadata" class="project-video"
+                            onpause="document.getElementById('videoOverlay').style.display='flex'">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="project-overlay video-overlay" id="videoOverlay">
+                            <a href="../Dave_edited%20davo/index.php" target="_blank"
+                                class="btn btn-sm btn-primary">Live Demo</a>
+                            <button
+                                onclick="document.getElementById('demoVideo').play(); document.getElementById('videoOverlay').style.display='none';"
+                                class="btn btn-sm"
+                                style="background:#e20606; color:white; border:none; padding:10px 20px; font-weight:700;"><i
+                                    class="bi bi-play-circle-fill"></i> Watch Video</button>
+                            <a href="https://github.com/Dawit-21" target="_blank" class="btn btn-sm btn-outline"><i
+                                    class="bi bi-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Daycare Management System</h3>
+                        <p class="project-problem"><strong>Problem:</strong> Fragmented communication and manual
+                            tracking of children record and attendance.</p>
+                        <p class="project-solution"><strong>Solution:</strong> A robust web-based management platform
+                            for real-time tracking and role-based access.</p>
+                        <div class="project-tech">
+                            <span>PHP</span> <span>MySQL</span> <span>JavaScript</span> <span>Security</span>
+                        </div>
+                        <div class="technical-challenge">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Built multi-role auth, secured forms with CSRF, and added English/Amharic
+                                support.</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates">
+            <h2 class="section-title">Professional Certifications</h2>
+            <div class="certs-grid">
+                <a href="assets/certificates/My Android Developer Fundamental Certifecate.pdf" target="_blank"
+                    class="cert-card glass">
+                    <div class="cert-icon"><i class="bi bi-android2"></i></div>
+                    <p>Android Developer Fundamentals</p>
+                    <div class="cert-overlay">
+                        <span class="btn btn-sm btn-primary pill">Click Me <i
+                                class="bi bi-box-arrow-up-right ms-2"></i></span>
+                    </div>
+                </a>
+                <a href="assets/certificates/My Data Analysis Fundamentals Certifecate.pdf" target="_blank"
+                    class="cert-card glass">
+                    <div class="cert-icon"><i class="bi bi-bar-chart-fill"></i></div>
+                    <p>Data Analysis Fundamentals</p>
+                    <div class="cert-overlay">
+                        <span class="btn btn-sm btn-primary pill">Click Me <i
+                                class="bi bi-box-arrow-up-right ms-2"></i></span>
+                    </div>
+                </a>
+                <a href="assets/certificates/My Fundamental AI Certifecate.pdf" target="_blank" class="cert-card glass">
+                    <div class="cert-icon"><i class="bi bi-cpu-fill"></i></div>
+                    <p>Artificial Intelligence</p>
+                    <div class="cert-overlay">
+                        <span class="btn btn-sm btn-primary pill">Click Me <i
+                                class="bi bi-box-arrow-up-right ms-2"></i></span>
+                    </div>
+                </a>
+                <a href="assets/certificates/my fundamental Programming certifecate.pdf" target="_blank"
+                    class="cert-card glass">
+                    <div class="cert-icon"><i class="bi bi-code-square"></i></div>
+                    <p>Programming Fundamentals</p>
+                    <div class="cert-overlay">
+                        <span class="btn btn-sm btn-primary pill">Click Me <i
+                                class="bi bi-box-arrow-up-right ms-2"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-cta glass">
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind or looking for a full-stack partner? Let's talk.</p>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <input type="text" id="contactName" name="name" placeholder="Name" required minlength="2"
+                            pattern="[\p{L}\s]+" title="Only letters and spaces allowed">
+                        <input type="email" id="contactEmail" name="email" placeholder="Email (e.g., user@example.com)"
+                            required>
+                    </div>
+                    <textarea id="contactMessage" name="message" placeholder="Your Message" rows="5" required
+                        minlength="10"></textarea>
+                    <button type="submit" id="contactSubmitBtn" class="btn btn-primary pill">
+                        <span>Send Message</span>
+                        <div class="spinner ms-2 d-none"
+                            style="width:1rem;height:1rem;border:2px solid #fff;border-top:2px solid transparent;border-radius:50%;animation:spin 1s linear infinite;display:none;">
+                        </div>
+                    </button>
+                    <!-- Spinner CSS added directly for simplicity -->
+                    <style>
+                        @keyframes spin {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        .d-none {
+                            display: none !important;
+                        }
+
+                        #contactSubmitBtn {
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    </style>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">DAWIT<span>.</span></div>
+            <p>&copy; 2026 Dawit Ateka Tamie. diemasdawit.21@gmail.com</p>
+            <div class="social-links">
+                <a href="https://github.com/Dawit-21" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://t.me/Diemas21" title="Telegram"><i class="bi bi-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
