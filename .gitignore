@@ -1,0 +1,18 @@
+# Ignore large video files (too big for GitHub - host on YouTube/GDrive instead)
+assets/images/*.mp4
+assets/images/*.avi
+assets/images/*.mov
+assets/images/*.mkv
+
+# Ignore PHP email log
+logs/
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore IDE files
+.vscode/
+.idea/

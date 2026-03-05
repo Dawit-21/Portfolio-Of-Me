@@ -260,7 +260,9 @@
             <div class="contact-cta glass">
                 <h2>Let's Work Together</h2>
                 <p>Have a project in mind or looking for a full-stack partner? Let's talk.</p>
-                <form id="contactForm" class="contact-form" novalidate>
+                <form id="contactForm" class="contact-form" name="contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+                    <input type="hidden" name="form-name" value="contact">
+                    <input type="hidden" name="bot-field" style="display:none">
                     <div class="form-row">
                         <input type="text" id="contactName" name="name" placeholder="Name" required minlength="2"
                             pattern="[\p{L}\s]+" title="Only letters and spaces allowed">

@@ -135,35 +135,35 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.textContent = 'Sending...';
 
             try {
-                const response = await fetch('contact_handler.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
+                // Submit to Netlify Forms — works on static hosting, no PHP needed
+                const body = new URLSearchParams({
+                    'form-name': 'contact',
+                    'name': formData.name,
+                    'email': formData.email,
+                    'message': formData.message
                 });
 
-                const data = await response.json();
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: body.toString()
+                });
 
-                if (data.status === 'success') {
-                    // Premium Success Alert
+                if (response.ok) {
                     Swal.fire({
-                        title: 'Success!',
-                        text: data.message,
+                        title: '🎉 Message Sent!',
+                        text: 'Thank you! I have received your message and will get back to you at ' + formData.email + ' soon.',
                         icon: 'success',
                         confirmButtonColor: '#2CA7A5',
                         background: '#0B1B1D',
                         color: '#fff',
-                        customClass: {
-                            popup: 'glass-alert'
-                        }
+                        customClass: { popup: 'glass-alert' }
                     });
                     contactForm.reset();
                 } else {
-                    // Warning Alert for Validation Errors
                     Swal.fire({
                         title: 'Oops...',
-                        text: data.message,
+                        text: 'There was a problem sending your message. Please try again.',
                         icon: 'warning',
                         confirmButtonColor: '#E8C678',
                         background: '#0B1B1D',
@@ -174,14 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Error:", error);
                 Swal.fire({
                     title: 'Error!',
-                    text: 'Something went wrong while sending your message. Please try again later.',
+                    text: 'Something went wrong. Please email me directly at diemasdawit.21@gmail.com',
                     icon: 'error',
                     confirmButtonColor: '#ff4444',
                     background: '#0B1B1D',
                     color: '#fff'
                 });
             } finally {
-                // Restore button state
                 btn.disabled = false;
                 spinner.classList.add('d-none');
                 btnText.textContent = 'Send Message';
