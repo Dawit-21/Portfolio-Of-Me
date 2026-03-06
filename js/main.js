@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Submit using FormSubmit API (bypasses Netlify's 404 bugs)
-                const response = await fetch('https://formsubmit.co/ajax/diemasdawit.21@gmail.com', {
+                const response = await fetch('https://formsubmit.co/ajax/heruyane@gmail.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Error:", error);
                 Swal.fire({
                     title: 'Error!',
-                    text: 'Something went wrong. Please email me directly at diemasdawit.21@gmail.com',
+                    text: 'Something went wrong. Please email me directly at heruyane@gmail.com',
                     icon: 'error',
                     confirmButtonColor: '#ff4444',
                     background: '#0B1B1D',
