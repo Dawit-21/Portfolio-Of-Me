@@ -123,16 +123,24 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.textContent = 'Sending...';
 
             try {
-                // Submit to Netlify Forms reliably using FormData to capture all hidden fields
-                const formDataObj = new FormData(contactForm);
-
-                const response = await fetch('/', {
+                // Submit using FormSubmit API (bypasses Netlify's 404 bugs)
+                const response = await fetch('https://formsubmit.co/ajax/diemasdawit.21@gmail.com', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formDataObj).toString()
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message,
+                        _subject: "New message from Dawit's Portfolio!"
+                    })
                 });
 
-                if (response.ok) {
+                const data = await response.json();
+
+                if (response.ok && data.success) {
                     Swal.fire({
                         title: '🎉 Message Sent!',
                         text: 'Thank you! I have received your message and will get back to you at ' + formData.email + ' soon.',
