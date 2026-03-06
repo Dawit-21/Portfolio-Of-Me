@@ -123,18 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.textContent = 'Sending...';
 
             try {
-                // Submit to Netlify Forms — works on static hosting, no PHP needed
-                const body = new URLSearchParams({
-                    'form-name': 'contact',
-                    'name': formData.name,
-                    'email': formData.email,
-                    'message': formData.message
-                });
+                // Submit to Netlify Forms reliably using FormData to capture all hidden fields
+                const formDataObj = new FormData(contactForm);
 
                 const response = await fetch('/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: body.toString()
+                    body: new URLSearchParams(formDataObj).toString()
                 });
 
                 if (response.ok) {
